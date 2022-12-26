@@ -13,8 +13,8 @@ public class IndexController {
         return new RedirectView("/note/list");
     }
 
-    @GetMapping("/login")
-    public String login() { return "login"; }
+//    @GetMapping("/login")
+//    public String login() { return "login"; }
 
     @GetMapping("/accessdenied")
     public String deniedPage() {

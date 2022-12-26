@@ -21,6 +21,9 @@ public class UserDAO {
     @Column(name = "password", nullable = false, length = 60)
     private String password;
 
+    @Transient
+    private String passwordConfirm;
+
     @OneToMany(mappedBy = "user")
     private Set<NoteDAO> notes = new LinkedHashSet<>();
 
@@ -70,4 +73,11 @@ public class UserDAO {
         this.roles = roles;
     }
 
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
+    }
 }
